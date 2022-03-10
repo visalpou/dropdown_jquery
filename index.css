@@ -1,5 +1,4 @@
 .left-menu{
-    width: 300px;
     float: left;
     background-color: aqua;
     font-size: 18px;
@@ -32,4 +31,61 @@
     width: 200px;
     float: left;
     display: none;
+}
+
+.slide_box{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+.slide_box .btn_next{
+    text-align: center;
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    background-color: black;
+    color: white;
+    position: absolute;
+}
+.btn_back{
+    text-align: center;
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    left: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    background-color: black;
+    color: white;
+    position: absolute;
+}
+.slide{
+    margin-top: 10px;
+    float: left; 
+    width: 100%;
+    height: 100%;
+    display: none;
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+@keyframes fade{
+    from{
+       
+        right: -100%;
+    }
+    to{
+        
+        right: 0;
+    }
+}
+.slide img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    float: left;
 }
